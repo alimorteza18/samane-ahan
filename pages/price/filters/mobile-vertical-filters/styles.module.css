@@ -1,0 +1,31 @@
+.circleButton {
+  position: fixed;
+  top: 50%;
+  right: -4%; /* Adjust the positioning as per your needs */
+  width: 50px;
+  height: 50px;
+  /* border-radius: 50%; */
+  background-color: rgb(16, 180, 16) !important;
+  padding: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure the button is above other elements if necessary */
+}
+
+.icon {
+  /* animation: spin 2s linear infinite; */
+  color: #fff;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

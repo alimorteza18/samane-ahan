@@ -1,0 +1,153 @@
+.dt-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dt-table-header {
+  width: 100%;
+  background-color: #ffefc6;
+  color: black;
+}
+
+.dt-table-header-mobile {
+  padding: 15px 10px;
+}
+
+.dt-table-header-desktop {
+  padding: 15px 4px;
+}
+
+.dt-table-container .dt-row {
+  padding: 15px;
+}
+
+.dt-table-container .dt-row:nth-child(even) {
+  background-color: #ffffff;
+}
+.dt-table-container .dt-row:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.dt-table-container .dt-row:last-child {
+  /* border-bottom: 1px solid #cccccc; */
+}
+
+.dt-table-container img {
+  float: right;
+}
+.dt-row {
+  width: 100%;
+  display: grid;
+  position: relative;
+  align-items: center;
+  height: 56px !important;
+  padding: 0 10px !important;
+  grid-template-columns: 150px repeat(auto-fit, minmax(0, 1fr));
+}
+.dt-header-row {
+  z-index: 2;
+  width: 100%;
+  display: grid;
+  position: relative;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px 15px;
+  grid-template-columns: 150px repeat(auto-fit, minmax(0, 1fr));
+}
+
+.dt-header-row .cell {
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: black;
+  justify-content: start;
+}
+
+.dt-cell {
+  text-align: center;
+  color: black;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.dt-expand-icon {
+  position: absolute;
+  left: 10px;
+  align-self: center;
+}
+
+.dt-full-width-text {
+  display: inline-block;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+}
+
+.dt-full-width-index-column-container {
+  background-color: #ffd15d;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30px;
+  overflow: hidden;
+}
+
+.dt-full-width-index-column-container .dt-full-width-text-animate {
+  display: inline-block;
+  white-space: nowrap;
+  transform: rotate(-90deg) translateY(100%); /* Add the translateY() transform here */
+  animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: rotate(-90deg) translateX(-20%);
+  }
+  100% {
+    transform: rotate(-90deg) translateX(calc(20% + 1rem));
+  }
+  /* add these keyframes to create the wrap-around effect */
+  50% {
+    transform: rotate(-90deg) translateX(-20%);
+  }
+  0% {
+    transform: rotate(-90deg) translateX(calc(20% + 1rem));
+  }
+}
+@media (max-width: 768px) {
+  .dt-expand-icon {
+    left: 0;
+  }
+  .dt-cell {
+    font-size: 10px;
+  }
+
+  .dt-header-row .dt-cell {
+    font-size: 11px;
+  }
+  .dt-header-row {
+    /* top: 186px !important; */
+    grid-template-columns: 110px repeat(auto-fit, minmax(0, 1fr));
+  }
+  .dt-row {
+    grid-template-columns: 110px repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+
+.dt-table-body-wrapper {
+  width: 100%;
+  display: grid;
+}
+
+.dt-table-body-wrapper-fw-index-col {
+  grid-template-columns: 0.5fr 20fr;
+}
+
+.dt-rows-container {
+  width: 100%;
+  display: grid;
+}

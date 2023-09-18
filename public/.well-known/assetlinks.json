@@ -1,0 +1,23 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "ir.samaneahan.application",
+            "sha256_cert_fingerprints": [
+                "9A:BB:60:32:24:1B:48:39:2B:FB:0E:F2:52:CC:3E:73:AF:F6:B6:A2:0E:79:00:D6:A2:D1:56:C2:1B:F6:3F:F4"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "check_validation"
+        ],
+        "target": {
+            "namespace": "cafebazaar_twa",
+            "package_name": "ir.samaneahan.application"
+        }
+    }
+]
